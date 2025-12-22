@@ -6,7 +6,7 @@ export default function Header() {
       <div id="header-container">
         <div id="logo-left">
           <Link href="/" aria-label="Ir a inicio">
-            <h2 className="logo-text">Pensanta</h2>
+            <h2 className="logo-text">PenPlate</h2>
           </Link>
         </div>
         <div id="text-right">

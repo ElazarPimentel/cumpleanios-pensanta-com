@@ -5,22 +5,22 @@ import Footer from "@/components/Footer";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Pensanta - Desarrollo Web y Aplicaciones Empresariales en Buenos Aires | PMI, ART, Ciberseguridad",
+  title: "PenPlate - Desarrollo Web y Aplicaciones Empresariales en Buenos Aires | PMI, ART, Ciberseguridad",
   description: "Desarrollamos aplicaciones web y sitios corporativos en Buenos Aires, Argentina. Gestión de proyectos con metodologías PMI y ART, ciberseguridad, y capacitaciones técnicas. Equipo experto en soluciones digitales.",
-  authors: [{ name: "Pensanta" }],
+  authors: [{ name: "PenPlate" }],
   robots: "index, follow",
   metadataBase: new URL("https://templatenextjs.pensanta.com"),
   openGraph: {
     type: "website",
     url: "https://templatenextjs.pensanta.com/",
-    title: "Pensanta - Desarrollo Web y Aplicaciones Empresariales en Buenos Aires",
+    title: "PenPlate - Desarrollo Web y Aplicaciones Empresariales en Buenos Aires",
     description: "Desarrollamos aplicaciones web y sitios corporativos en Buenos Aires, Argentina. Gestión de proyectos con PMI y ART, ciberseguridad y capacitaciones técnicas.",
-    siteName: "Pensanta",
+    siteName: "PenPlate",
     locale: "es_AR",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pensanta - Desarrollo Web y Aplicaciones Empresariales en Buenos Aires",
+    title: "PenPlate - Desarrollo Web y Aplicaciones Empresariales en Buenos Aires",
     description: "Desarrollamos aplicaciones web y sitios corporativos en Buenos Aires, Argentina. Gestión de proyectos con PMI y ART, ciberseguridad y capacitaciones técnicas.",
   },
 };
@@ -58,7 +58,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "ProfessionalService",
-              "name": "Pensanta",
+              "name": "PenPlate",
               "url": "https://templatenextjs.pensanta.com",
               "email": "elazar.pimentel@pensanta.com",
               "telephone": "+54-911-3799-0312",

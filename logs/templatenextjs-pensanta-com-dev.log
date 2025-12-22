@@ -10,3 +10,35 @@
 ✓ Ready in 734ms
  GET / 200 in 3.0s (compile: 2.7s, render: 304ms)
 ✓ Compiled in 1367ms
+✓ Compiled in 487ms
+✓ Compiled in 39ms
+ GET / 200 in 2.9s (compile: 721ms, render: 2.2s)
+ GET / 200 in 792ms (compile: 648ms, render: 144ms)
+ GET / 200 in 777ms (compile: 713ms, render: 64ms)
+ GET / 200 in 268ms (compile: 126ms, render: 142ms)
+
+> templatenextjs-pensanta-com@0.1.0 dev /home/rob/Documents/work/pensanta/websites/templatenextjs-pensanta-com
+> next dev
+
+▲ Next.js 16.1.1 (Turbopack)
+- Local:         http://localhost:3078
+- Network:       http://192.168.0.5:3078
+
+✓ Starting...
+✓ Ready in 1045ms
+ ELIFECYCLE  Command failed.
+[?25h
+
+> templatenextjs-pensanta-com@0.1.0 dev /home/rob/Documents/work/pensanta/websites/templatenextjs-pensanta-com
+> next dev
+
+▲ Next.js 16.1.1 (Turbopack)
+- Local:         http://localhost:3078
+- Network:       http://192.168.0.5:3078
+
+✓ Starting...
+✓ Ready in 889ms
+ GET / 200 in 724ms (compile: 364ms, render: 360ms)
+ GET /es/portfolio 404 in 1295ms (compile: 1222ms, render: 73ms)
+ GET /es/portfolio 404 in 172ms (compile: 5ms, render: 166ms)
+ GET / 200 in 72ms (compile: 4ms, render: 69ms)
