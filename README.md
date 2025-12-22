@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Pensanta Template
 
-## Getting Started
+Standardized Next.js template for Pensanta projects with TypeScript, SCSS, and ESLint.
 
-First, run the development server:
+## Stack
+
+- **Next.js 16.1.1** (Turbopack)
+- **React 19.2.3**
+- **TypeScript 5.9** (strict mode)
+- **SCSS/Sass** (NO Tailwind)
+- **ESLint**
+- **pnpm** (package manager)
+
+## Quick Start
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Copy this template
+cp -r templatenextjs-pensanta-com your-project-name
+
+# Navigate
+cd your-project-name
+
+# Install
+pnpm install
+
+# Build
+pnpm build
+
+# Start production
+pnpm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Configuration
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+After copying, update:
+1. `package.json` → "name" and "homepage" fields
+2. `src/app/layout.tsx` → metadata (title, description)
+3. `src/app/globals.scss` → styles as needed
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Commands
 
-## Learn More
+```bash
+pnpm dev       # Development server
+pnpm build     # Production build
+pnpm start     # Production server
+pnpm lint      # Run ESLint
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+✅ App Router with src/ directory
+✅ TypeScript strict mode
+✅ SCSS support
+✅ ESLint configured
+✅ Import alias (@/*)
+✅ Optimized for Vercel
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Documentation
 
-## Deploy on Vercel
+See [CLAUDE.md](./CLAUDE.md) for detailed documentation.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Template by:** [Pensanta.com](https://pensanta.com)

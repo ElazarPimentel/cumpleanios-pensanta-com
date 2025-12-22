@@ -1,0 +1,12 @@
+
+> templatenextjs-pensanta-com@0.1.0 dev /home/rob/Documents/work/pensanta/websites/templatenextjs-pensanta-com
+> next dev
+
+▲ Next.js 16.1.1 (Turbopack)
+- Local:         http://localhost:3078
+- Network:       http://192.168.0.5:3078
+
+✓ Starting...
+✓ Ready in 734ms
+ GET / 200 in 3.0s (compile: 2.7s, render: 304ms)
+✓ Compiled in 1367ms
