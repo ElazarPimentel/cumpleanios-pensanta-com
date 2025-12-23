@@ -233,7 +233,23 @@ mcp__gsc__list_properties()
 # Returns: sc-domain:example.com OR https://www.example.com
 ```
 
-**If site NOT in list, add it:**
+**If site NOT in list, add and verify it (full automated workflow):**
+```python
+# 1. Get verification meta tag
+mcp__gsc__get_verification_token(site_url="https://example.com")
+# Returns: <meta name="google-site-verification" content="TOKEN" />
+
+# 2. Add the meta tag to site's <head> section (layout.tsx or index.html)
+# 3. Deploy with gitpush.sh
+
+# 4. Verify ownership (after deployment completes)
+mcp__gsc__verify_site(site_url="https://example.com")
+
+# 5. Add to Search Console as domain property
+mcp__gsc__add_site(site_url="sc-domain:example.com")
+```
+
+**If site already verified (just needs adding):**
 ```python
 # Add domain property (recommended)
 mcp__gsc__add_site(

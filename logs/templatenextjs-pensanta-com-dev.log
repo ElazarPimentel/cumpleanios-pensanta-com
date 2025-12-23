@@ -42,3 +42,4 @@
  GET /es/portfolio 404 in 1295ms (compile: 1222ms, render: 73ms)
  GET /es/portfolio 404 in 172ms (compile: 5ms, render: 166ms)
  GET / 200 in 72ms (compile: 4ms, render: 69ms)
+✓ Compiled in 1878ms
