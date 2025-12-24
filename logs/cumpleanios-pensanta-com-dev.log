@@ -1,0 +1,59 @@
+
+> pensanios@2.1.0 dev /home/rob/Documents/work/pensanta/websites/cumpleanios-pensanta-com
+> next dev
+
+▲ Next.js 16.1.1 (Turbopack)
+- Local:         http://localhost:3079
+- Network:       http://192.168.0.5:3079
+- Environments: .env.local
+
+✓ Starting...
+✓ Ready in 1990ms
+○ Compiling / ...
+ GET / 200 in 7.4s (compile: 7.0s, render: 354ms)
+ GET / 200 in 97ms (compile: 6ms, render: 92ms)
+ GET / 200 in 71ms (compile: 5ms, render: 66ms)
+ GET / 200 in 71ms (compile: 5ms, render: 65ms)
+ ELIFECYCLE  Command failed.
+[?25h
+
+> pensanios@2.1.0 dev /home/rob/Documents/work/pensanta/websites/cumpleanios-pensanta-com
+> next dev
+
+▲ Next.js 16.1.1 (Turbopack)
+- Local:         http://localhost:3079
+- Network:       http://192.168.0.5:3079
+- Environments: .env.local
+
+✓ Starting...
+✓ Ready in 1137ms
+ GET / 200 in 3.1s (compile: 2.8s, render: 321ms)
+ GET / 200 in 92ms (compile: 7ms, render: 85ms)
+ GET / 200 in 60ms (compile: 6ms, render: 54ms)
+ GET / 200 in 52ms (compile: 4ms, render: 49ms)
+ GET / 200 in 3.7s (compile: 2.5s, render: 1196ms)
+ GET / 200 in 3.4s (compile: 1217ms, render: 2.2s)
+ GET / 200 in 3.4s (compile: 3.3s, render: 121ms)
+ GET / 200 in 3.4s (compile: 2.7s, render: 662ms)
+ GET / 200 in 3.4s (compile: 3.3s, render: 98ms)
+ GET / 200 in 3.4s (compile: 3.3s, render: 57ms)
+ GET / 200 in 200ms (compile: 8ms, render: 192ms)
+ GET / 200 in 204ms (compile: 57ms, render: 147ms)
+ GET / 200 in 203ms (compile: 123ms, render: 80ms)
+ GET / 200 in 203ms (compile: 161ms, render: 42ms)
+ GET / 200 in 257ms (compile: 56ms, render: 200ms)
+ GET / 200 in 186ms (compile: 5ms, render: 181ms)
+ GET / 200 in 186ms (compile: 31ms, render: 156ms)
+ GET / 200 in 185ms (compile: 52ms, render: 133ms)
+ GET / 200 in 106ms (compile: 27ms, render: 79ms)
+ GET / 200 in 111ms (compile: 4ms, render: 107ms)
+ GET / 200 in 186ms (compile: 4ms, render: 183ms)
+ GET / 200 in 149ms (compile: 25ms, render: 125ms)
+ GET / 200 in 149ms (compile: 54ms, render: 96ms)
+ GET / 200 in 152ms (compile: 6ms, render: 147ms)
+ GET / 200 in 70ms (compile: 4ms, render: 65ms)
+ GET / 200 in 70ms (compile: 32ms, render: 37ms)
+⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+✓ Compiled in 470ms
+○ Compiling middleware ...
+✓ Compiled in 1566ms

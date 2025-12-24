@@ -5,23 +5,23 @@ import Footer from "@/components/Footer";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "PenPlate - Desarrollo Web y Aplicaciones Empresariales en Buenos Aires | PMI, ART, Ciberseguridad",
-  description: "Desarrollamos aplicaciones web y sitios corporativos en Buenos Aires, Argentina. Gestión de proyectos con metodologías PMI y ART, ciberseguridad, y capacitaciones técnicas. Equipo experto en soluciones digitales.",
-  authors: [{ name: "PenPlate" }],
+  title: "PensaNIOS - Gestión de Cumpleaños | Pensanta",
+  description: "PensaNIOS - Sistema de gestión de cumpleaños y eventos infantiles de Pensanta.",
+  authors: [{ name: "Pensanta" }],
   robots: "index, follow",
-  metadataBase: new URL("https://templatenextjs.pensanta.com"),
+  metadataBase: new URL("https://cumpleanios.pensanta.com"),
   openGraph: {
     type: "website",
-    url: "https://templatenextjs.pensanta.com/",
-    title: "PenPlate - Desarrollo Web y Aplicaciones Empresariales en Buenos Aires",
-    description: "Desarrollamos aplicaciones web y sitios corporativos en Buenos Aires, Argentina. Gestión de proyectos con PMI y ART, ciberseguridad y capacitaciones técnicas.",
-    siteName: "PenPlate",
+    url: "https://cumpleanios.pensanta.com/",
+    title: "PensaNIOS - Gestión de Cumpleaños | Pensanta",
+    description: "PensaNIOS - Sistema de gestión de cumpleaños y eventos infantiles de Pensanta.",
+    siteName: "PensaNIOS",
     locale: "es_AR",
   },
   twitter: {
     card: "summary_large_image",
-    title: "PenPlate - Desarrollo Web y Aplicaciones Empresariales en Buenos Aires",
-    description: "Desarrollamos aplicaciones web y sitios corporativos en Buenos Aires, Argentina. Gestión de proyectos con PMI y ART, ciberseguridad y capacitaciones técnicas.",
+    title: "PensaNIOS - Gestión de Cumpleaños | Pensanta",
+    description: "PensaNIOS - Sistema de gestión de cumpleaños y eventos infantiles de Pensanta.",
   },
 };
 
@@ -57,30 +57,17 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "ProfessionalService",
-              "name": "PenPlate",
-              "url": "https://templatenextjs.pensanta.com",
-              "email": "elazar.pimentel@pensanta.com",
-              "telephone": "+54-911-3799-0312",
-              "description": "Consultora de desarrollo web, aplicaciones empresariales, gestión de proyectos PMI y ART, y ciberseguridad en Buenos Aires, Argentina",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Buenos Aires",
-                "addressCountry": "AR",
-                "addressRegion": "Buenos Aires"
-              },
-              "areaServed": {
-                "@type": "Country",
-                "name": "Argentina"
-              },
-              "priceRange": "$$",
-              "serviceType": [
-                "Desarrollo Web",
-                "Desarrollo de Aplicaciones",
-                "Gestión de Proyectos",
-                "Ciberseguridad",
-                "Capacitaciones Técnicas"
-              ]
+              "@type": "WebApplication",
+              "name": "PensaNIOS",
+              "url": "https://cumpleanios.pensanta.com",
+              "description": "Sistema de gestión de cumpleaños y eventos infantiles de Pensanta",
+              "applicationCategory": "Event Management",
+              "operatingSystem": "Web",
+              "provider": {
+                "@type": "Organization",
+                "name": "Pensanta",
+                "url": "https://pensanta.com"
+              }
             })
           }}
         />
