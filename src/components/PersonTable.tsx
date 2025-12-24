@@ -10,7 +10,6 @@ interface PersonTableProps {
   onSort: (field: SortField) => void
   onEdit: (person: PersonWithAge) => void
   onDelete: (id: string) => void
-  onToggleActive: (id: string, isActive: boolean) => void
 }
 
 export default function PersonTable({
@@ -20,7 +19,6 @@ export default function PersonTable({
   onSort,
   onEdit,
   onDelete,
-  onToggleActive,
 }: PersonTableProps) {
   const renderSortIcon = (field: SortField) => {
     if (sortField !== field) return <span className="sort-icon">↕</span>
@@ -90,13 +88,6 @@ export default function PersonTable({
                       title="Editar"
                     >
                       ✏️
-                    </button>
-                    <button
-                      onClick={() => onToggleActive(person.id, !person.is_active)}
-                      className="btn-icon"
-                      title={person.is_active ? 'Desactivar' : 'Activar'}
-                    >
-                      {person.is_active ? '👁️' : '👁️‍🗨️'}
                     </button>
                     <button
                       onClick={() => {

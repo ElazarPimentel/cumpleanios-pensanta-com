@@ -15,7 +15,6 @@ export default function BirthdayManager() {
   const [editingPerson, setEditingPerson] = useState<Person | null>(null)
   const [sortField, setSortField] = useState<SortField>('nextBirthday')
   const [sortOrder, setSortOrder] = useState<SortOrder>('asc')
-  const [showInactive, setShowInactive] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
   const supabase = createClient()
@@ -103,44 +102,18 @@ export default function BirthdayManager() {
     }
   }
 
-  const handleToggleActive = async (id: string, isActive: boolean) => {
-    const { error } = await supabase
-      .from('persons')
-      .update({ is_active: isActive })
-      .eq('id', id)
-
-    if (error) {
-      setError('Error al actualizar estado')
-      console.error(error)
-    } else {
-      fetchPersons()
-    }
-  }
-
   const handleCancel = () => {
     setShowForm(false)
     setEditingPerson(null)
   }
 
-  const filteredPersons = showInactive
-    ? persons
-    : persons.filter((p) => p.is_active)
-
-  const sortedPersons = sortPersons(filteredPersons, sortField, sortOrder)
+  const sortedPersons = sortPersons(persons, sortField, sortOrder)
 
   return (
     <div className="birthday-manager">
       <div className="manager-header">
         <h1>Cumpleaños</h1>
         <div className="header-actions">
-          <label className="checkbox-label">
-            <input
-              type="checkbox"
-              checked={showInactive}
-              onChange={(e) => setShowInactive(e.target.checked)}
-            />
-            Mostrar inactivos
-          </label>
           <button
             onClick={() => {
               setEditingPerson(null)
@@ -178,17 +151,11 @@ export default function BirthdayManager() {
           onSort={handleSort}
           onEdit={handleEdit}
           onDelete={handleDelete}
-          onToggleActive={handleToggleActive}
         />
       )}
 
       <div className="stats">
-        {filteredPersons.length} persona{filteredPersons.length !== 1 ? 's' : ''}
-        {!showInactive && persons.length !== filteredPersons.length && (
-          <span className="inactive-count">
-            {' '}({persons.length - filteredPersons.length} inactivo{persons.length - filteredPersons.length !== 1 ? 's' : ''})
-          </span>
-        )}
+        {persons.length} persona{persons.length !== 1 ? 's' : ''}
       </div>
     </div>
   )
