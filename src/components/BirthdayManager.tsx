@@ -4,10 +4,16 @@ import { useState, useEffect, useCallback } from 'react'
 import { createClient } from '@/utils/supabase/client'
 import { Person, PersonWithAge, SortField, SortOrder } from '@/types/person'
 import { enrichPersonWithAge, sortPersons } from '@/lib/age-utils'
+import { Locale, translations } from '@/lib/translations'
 import PersonForm from './PersonForm'
 import PersonTable from './PersonTable'
 
-export default function BirthdayManager() {
+interface BirthdayManagerProps {
+  locale?: Locale
+}
+
+export default function BirthdayManager({ locale = 'es' }: BirthdayManagerProps) {
+  const t = translations[locale]
   const [persons, setPersons] = useState<PersonWithAge[]>([])
   const [isLoading, setIsLoading] = useState(true)
   const [isSaving, setIsSaving] = useState(false)
@@ -29,7 +35,7 @@ export default function BirthdayManager() {
       .order('name')
 
     if (error) {
-      setError('Error al cargar personas')
+      setError(t.errorLoading)
       console.error(error)
     } else {
       const enriched = (data as Person[]).map(enrichPersonWithAge)
@@ -63,16 +69,17 @@ export default function BirthdayManager() {
         .eq('id', editingPerson.id)
 
       if (error) {
-        setError('Error al actualizar')
+        setError(t.errorUpdating)
         console.error(error)
       }
     } else {
+      const { data: { user } } = await supabase.auth.getUser()
       const { error } = await supabase
         .from('persons')
-        .insert([{ ...data, is_active: true }])
+        .insert([{ ...data, is_active: true, user_id: user?.id }])
 
       if (error) {
-        setError('Error al crear')
+        setError(t.errorCreating)
         console.error(error)
       }
     }
@@ -95,7 +102,7 @@ export default function BirthdayManager() {
       .eq('id', id)
 
     if (error) {
-      setError('Error al eliminar')
+      setError(t.errorDeleting)
       console.error(error)
     } else {
       fetchPersons()
@@ -112,7 +119,7 @@ export default function BirthdayManager() {
   return (
     <div className="birthday-manager">
       <div className="manager-header">
-        <h1>Cumpleaños</h1>
+        <h1>{t.birthdays}</h1>
         <div className="header-actions">
           <button
             onClick={() => {
@@ -121,7 +128,7 @@ export default function BirthdayManager() {
             }}
             className="btn-primary"
           >
-            + Nueva Persona
+            {t.newPerson}
           </button>
         </div>
       </div>
@@ -136,13 +143,14 @@ export default function BirthdayManager() {
               onSave={handleSave}
               onCancel={handleCancel}
               isLoading={isSaving}
+              locale={locale}
             />
           </div>
         </div>
       )}
 
       {isLoading ? (
-        <div className="loading">Cargando...</div>
+        <div className="loading">{t.loading}</div>
       ) : (
         <PersonTable
           persons={sortedPersons}
@@ -151,11 +159,12 @@ export default function BirthdayManager() {
           onSort={handleSort}
           onEdit={handleEdit}
           onDelete={handleDelete}
+          locale={locale}
         />
       )}
 
       <div className="stats">
-        {persons.length} persona{persons.length !== 1 ? 's' : ''}
+        {persons.length} {persons.length !== 1 ? t.personsPlural : t.persons}
       </div>
     </div>
   )

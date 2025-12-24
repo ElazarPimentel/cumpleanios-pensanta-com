@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { createClient } from '@/utils/supabase/server';
 import LogoutButton from './LogoutButton';
+import LanguageSwitcher from './LanguageSwitcher';
 
 export default async function Header() {
   const supabase = await createClient()
@@ -12,12 +13,15 @@ export default async function Header() {
         <Link href="/" aria-label="Ir a inicio" className="logo">
           <h1>PensaNIOS</h1>
         </Link>
-        {user && (
-          <div className="user-info">
-            <span className="user-email">{user.email}</span>
-            <LogoutButton />
-          </div>
-        )}
+        <div className="header-right">
+          <LanguageSwitcher />
+          {user && (
+            <div className="user-info">
+              <span className="user-email">{user.email}</span>
+              <LogoutButton />
+            </div>
+          )}
+        </div>
       </div>
     </header>
   );

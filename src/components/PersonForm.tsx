@@ -2,15 +2,19 @@
 
 import { useState, useEffect } from 'react'
 import { Person } from '@/types/person'
+import { Locale, translations, getMonthNames } from '@/lib/translations'
 
 interface PersonFormProps {
   person?: Person | null
   onSave: (data: { name: string; day: number; month: number; year: number }) => Promise<void>
   onCancel: () => void
   isLoading?: boolean
+  locale?: Locale
 }
 
-export default function PersonForm({ person, onSave, onCancel, isLoading }: PersonFormProps) {
+export default function PersonForm({ person, onSave, onCancel, isLoading, locale = 'es' }: PersonFormProps) {
+  const t = translations[locale]
+  const monthNames = getMonthNames(locale)
   const [name, setName] = useState('')
   const [day, setDay] = useState(1)
   const [month, setMonth] = useState(1)
@@ -38,41 +42,28 @@ export default function PersonForm({ person, onSave, onCancel, isLoading }: Pers
   const currentYear = new Date().getFullYear()
   const years = Array.from({ length: 125 }, (_, i) => currentYear - i)
   const days = Array.from({ length: 31 }, (_, i) => i + 1)
-  const months = [
-    { value: 1, label: 'Enero' },
-    { value: 2, label: 'Febrero' },
-    { value: 3, label: 'Marzo' },
-    { value: 4, label: 'Abril' },
-    { value: 5, label: 'Mayo' },
-    { value: 6, label: 'Junio' },
-    { value: 7, label: 'Julio' },
-    { value: 8, label: 'Agosto' },
-    { value: 9, label: 'Septiembre' },
-    { value: 10, label: 'Octubre' },
-    { value: 11, label: 'Noviembre' },
-    { value: 12, label: 'Diciembre' },
-  ]
+  const months = monthNames.map((label, i) => ({ value: i + 1, label }))
 
   return (
     <form onSubmit={handleSubmit} className="person-form">
-      <h2>{person ? 'Editar Persona' : 'Nueva Persona'}</h2>
+      <h2>{person ? t.editPersonTitle : t.newPersonTitle}</h2>
 
       <div className="form-group">
-        <label htmlFor="name">Nombre</label>
+        <label htmlFor="name">{t.name}</label>
         <input
           type="text"
           id="name"
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
-          placeholder="Nombre completo"
+          placeholder={t.namePlaceholder}
           disabled={isLoading}
         />
       </div>
 
       <div className="form-row">
         <div className="form-group">
-          <label htmlFor="day">Día</label>
+          <label htmlFor="day">{t.day}</label>
           <select
             id="day"
             value={day}
@@ -86,7 +77,7 @@ export default function PersonForm({ person, onSave, onCancel, isLoading }: Pers
         </div>
 
         <div className="form-group">
-          <label htmlFor="month">Mes</label>
+          <label htmlFor="month">{t.month}</label>
           <select
             id="month"
             value={month}
@@ -100,7 +91,7 @@ export default function PersonForm({ person, onSave, onCancel, isLoading }: Pers
         </div>
 
         <div className="form-group">
-          <label htmlFor="year">Año</label>
+          <label htmlFor="year">{t.year}</label>
           <select
             id="year"
             value={year}
@@ -116,10 +107,10 @@ export default function PersonForm({ person, onSave, onCancel, isLoading }: Pers
 
       <div className="form-actions">
         <button type="button" onClick={onCancel} disabled={isLoading} className="btn-secondary">
-          Cancelar
+          {t.cancel}
         </button>
         <button type="submit" disabled={isLoading} className="btn-primary">
-          {isLoading ? 'Guardando...' : 'Guardar'}
+          {isLoading ? t.saving : t.save}
         </button>
       </div>
     </form>

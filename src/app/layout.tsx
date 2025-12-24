@@ -5,23 +5,27 @@ import Footer from "@/components/Footer";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "PensaNIOS - Gestión de Cumpleaños | Pensanta",
-  description: "PensaNIOS - Sistema de gestión de cumpleaños y eventos infantiles de Pensanta.",
+  title: "PensaNIOS - Recordá los cumpleaños de tus hijos | App gratis",
+  description: "¿Siempre te olvidás los cumpleaños? PensaNIOS te ayuda a recordar las fechas de cumpleaños de tus hijos, familia y amigos. Calculá edades automáticamente y recibí alertas. Gratis.",
+  keywords: ["cumpleaños", "recordatorio cumpleaños", "edad hijos", "calculadora edad", "app cumpleaños", "recordar cumpleaños hijos", "calendario cumpleaños familia"],
   authors: [{ name: "Pensanta" }],
   robots: "index, follow",
   metadataBase: new URL("https://cumpleanios.pensanta.com"),
+  alternates: {
+    canonical: "https://cumpleanios.pensanta.com",
+  },
   openGraph: {
     type: "website",
     url: "https://cumpleanios.pensanta.com/",
-    title: "PensaNIOS - Gestión de Cumpleaños | Pensanta",
-    description: "PensaNIOS - Sistema de gestión de cumpleaños y eventos infantiles de Pensanta.",
+    title: "PensaNIOS - Nunca más te olvides un cumpleaños",
+    description: "App gratis para recordar cumpleaños de tus hijos y familia. Calculá edades, días hasta el próximo cumple, y más. Para papás olvidadizos.",
     siteName: "PensaNIOS",
     locale: "es_AR",
   },
   twitter: {
     card: "summary_large_image",
-    title: "PensaNIOS - Gestión de Cumpleaños | Pensanta",
-    description: "PensaNIOS - Sistema de gestión de cumpleaños y eventos infantiles de Pensanta.",
+    title: "PensaNIOS - Nunca más te olvides un cumpleaños",
+    description: "App gratis para recordar cumpleaños de tus hijos y familia. Calculá edades, días hasta el próximo cumple. Para papás olvidadizos.",
   },
 };
 
@@ -60,9 +64,20 @@ export default function RootLayout({
               "@type": "WebApplication",
               "name": "PensaNIOS",
               "url": "https://cumpleanios.pensanta.com",
-              "description": "Sistema de gestión de cumpleaños y eventos infantiles de Pensanta",
-              "applicationCategory": "Event Management",
+              "description": "App gratis para recordar cumpleaños de tus hijos y familia. Calculá edades automáticamente y nunca más te olvides una fecha importante.",
+              "applicationCategory": "LifestyleApplication",
               "operatingSystem": "Web",
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "ARS"
+              },
+              "featureList": [
+                "Calculadora de edad automática",
+                "Cuenta regresiva hasta el próximo cumpleaños",
+                "Edad en meses para bebés",
+                "Login con Google"
+              ],
               "provider": {
                 "@type": "Organization",
                 "name": "Pensanta",
