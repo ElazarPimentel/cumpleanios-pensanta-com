@@ -5,6 +5,9 @@ import Footer from "@/components/Footer";
 import Script from "next/script";
 
 export const metadata: Metadata = {
+  verification: {
+    google: "-Iw7KpL5KeE99vMeNAu5WNxbCZP9tEomyJ_rgqwDAAs",
+  },
   title: "PensaNIOS - Recordá los cumpleaños de tus hijos | App gratis",
   description: "¿Siempre te olvidás los cumpleaños? PensaNIOS te ayuda a recordar las fechas de cumpleaños de tus hijos, familia y amigos. Calculá edades automáticamente y recibí alertas. Gratis.",
   keywords: ["cumpleaños", "recordatorio cumpleaños", "edad hijos", "calculadora edad", "app cumpleaños", "recordar cumpleaños hijos", "calendario cumpleaños familia"],
