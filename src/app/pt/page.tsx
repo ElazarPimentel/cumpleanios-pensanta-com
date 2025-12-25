@@ -4,7 +4,6 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: "PensaNIOS - Lembre dos Aniversários dos Seus Filhos | App Grátis",
   description: "Sempre esquece os aniversários? O PensaNIOS ajuda você a lembrar dos aniversários dos seus filhos, família e amigos. Calcule idades automaticamente. Grátis.",
-  keywords: ["aniversário", "lembrete aniversário", "idade filhos", "calculadora idade", "app aniversário", "lembrar aniversário filhos", "calendário aniversários família"],
   alternates: {
     canonical: "https://cumpleanios.pensanta.com/pt",
     languages: {

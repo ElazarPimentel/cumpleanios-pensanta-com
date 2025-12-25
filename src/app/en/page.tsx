@@ -4,7 +4,6 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: "PensaNIOS - Remember Your Kids' Birthdays | Free App",
   description: "Always forgetting birthdays? PensaNIOS helps you remember your kids', family and friends' birthdays. Auto-calculate ages and never miss a date again. Free.",
-  keywords: ["birthday", "birthday reminder", "kids age", "age calculator", "birthday app", "remember kids birthday", "family birthday calendar"],
   alternates: {
     canonical: "https://cumpleanios.pensanta.com/en",
     languages: {
