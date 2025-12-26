@@ -1,0 +1,22 @@
+{
+  "site_url": "https://cumpleanios.pensanta.com/",
+  "generated_at": "2025-12-25T08:55:46.376481",
+  "period": {
+    "start": "2025-11-27",
+    "end": "2025-12-25",
+    "days": 28
+  },
+  "data": {
+    "queries_28d": [],
+    "pages_28d": [],
+    "devices_28d": [],
+    "daily_28d": []
+  },
+  "summary": {
+    "total_clicks_28d": 0,
+    "total_impressions_28d": 0,
+    "average_ctr_28d": 0,
+    "total_queries": 0,
+    "total_pages": 0
+  }
+}
