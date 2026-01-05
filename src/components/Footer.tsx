@@ -18,12 +18,10 @@ export default function Footer() {
           <path d="M2 17l10 5 10-5M2 12l10 5 10-5" />
         </svg>
         <span>
-          Digitally carved by{' '}
+          Un sitio así para vos →{' '}
           <a
-            href="https://elazarpimentel.com"
+            href="https://elazarpimentel.com/?utm_source=portfolio&utm_medium=footer&utm_campaign=client-sites&utm_content=cumpleanios"
             target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Visit Elazar Pimentel's website"
           >
             ElazarPimentel.com
           </a>
