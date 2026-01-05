@@ -52,6 +52,7 @@ export default function RootLayout({
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         />
         <meta name="theme-color" content="#000000" />
+        <script defer src="https://pensanta-analytics.vercel.app/script.js" data-website-id="df52e577-b86d-4ade-9b60-38630308d4ab"></script>
       </head>
       <body>
         <Header />
