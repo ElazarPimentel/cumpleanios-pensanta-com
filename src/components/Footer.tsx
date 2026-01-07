@@ -3,7 +3,7 @@ import packageJson from "../../package.json";
 export default function Footer() {
   return (
     <footer className="container-main border-01" role="contentinfo">
-      <p>&copy; 2024 Pensanta.com - Todos los derechos reservados.</p>
+      <p>&copy; 2024 ElazarPimentel.com - Todos los derechos reservados.</p>
       <span className="version">v{packageJson.version}</span>
       <small>
         <svg
